@@ -12,6 +12,7 @@ type Collector struct {
 }
 
 type Params struct {
+	Count int
 }
 
 func NewCollector() *Collector {

@@ -48,6 +48,8 @@ func getPlaylistsCmd() *cobra.Command {
 		},
 	}
 
+	cmd.Flags().IntVarP(&c.Params.Count, "count", "c", 50, "Number of results to return")
+
 	return cmd
 }
 
@@ -65,6 +67,8 @@ func getSubsCommand() *cobra.Command {
 			return c.Subscriptions()
 		},
 	}
+
+	cmd.Flags().IntVarP(&c.Params.Count, "count", "c", 50, "Number of results to return")
 
 	return cmd
 }
